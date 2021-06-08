@@ -3,8 +3,9 @@ import Navbar from './Navbar';
 import Home from './Home';
 // import Example from './Example';
 // import EventHandling from './EventHandling';
-import States from './States';
-import ListOutput from './ListOutput';
+// import States from './States';
+// import ListOutput from './ListOutput';
+// import UseEffect from './UseEffect';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="content">
         <Home />
         {/* <ListOutput></ListOutput> */}
+        {/* <UseEffect></UseEffect> */}
       </div>
       {/* <Example></Example> */}
       {/* <EventHandling></EventHandling> */}
