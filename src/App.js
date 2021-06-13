@@ -1,25 +1,40 @@
 import './Navbar';
 import Navbar from './Navbar';
 import Home from './Home';
+import About from './About';
 // import Example from './Example';
 // import EventHandling from './EventHandling';
 // import States from './States';
 // import ListOutput from './ListOutput';
 // import UseEffect from './UseEffect';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import NewBlog from './NewBlog';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       <Navbar></Navbar>
       <div className="content">
-        <Home />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/create">
+            <NewBlog />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
         {/* <ListOutput></ListOutput> */}
         {/* <UseEffect></UseEffect> */}
       </div>
       {/* <Example></Example> */}
       {/* <EventHandling></EventHandling> */}
       {/* <States></States> */}
-    </div>
+      </div>
+    </Router>
   );
 }
 
