@@ -1,4 +1,4 @@
-//Custom hook to fetch data in general
+//Custom hook to fetch data in general, can be used for all fetch ops
 
 import { useState, useEffect } from 'react';
 
@@ -12,7 +12,7 @@ const useFetch = (url) => {
 
         const abortCont = new AbortController();                //AbortController object
 
-        setTimeout(() => {
+        // setTimeout(() => {
             fetch(url, {signal: abortCont.signal})                  //pass AbortController signal as option for fetch
             .then(res => {
                 if(!res.ok){
@@ -37,7 +37,7 @@ const useFetch = (url) => {
                     setIsLoading(false);
                 }
             });
-        }, 1000)
+        // }, 1000)
 
          return () => {                                  //returning cleanup function for unmounting component
             console.log('cleanup func');

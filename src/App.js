@@ -9,6 +9,8 @@ import About from './About';
 // import UseEffect from './UseEffect';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NewBlog from './NewBlog';
+import BlogDetails from './BlogDetails';
+import NotFound from './NotFound';
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/blogs/:id">
+            <BlogDetails />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
         {/* <ListOutput></ListOutput> */}
